@@ -109,6 +109,12 @@ namespace BeatSaverSharp.Models
         /// </summary>
         [JsonProperty("stars")]
         public float? Stars { get; internal set; }
+        
+        /// <summary>
+        /// Does this difficulty use Vivify?
+        /// </summary>
+        [JsonProperty("vivify")]
+        public bool Vivify { get; internal set; }
 
         internal BeatmapDifficulty() { }
 

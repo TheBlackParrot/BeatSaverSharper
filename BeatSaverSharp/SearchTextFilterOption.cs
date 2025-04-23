@@ -117,6 +117,11 @@ namespace BeatSaverSharp
         /// Is a map ranked on ScoreSaber?
         /// </summary>
         public bool? Ranked { get; set; }
+        
+        /// <summary>
+        /// Does a map use Vivify?
+        /// </summary>
+        public bool? Vivify { get; set; }
 
         /// <summary>
         /// How to sort the search.

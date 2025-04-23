@@ -56,6 +56,22 @@ namespace BeatSaverSharp.Tests
                 Assert.IsTrue(map.LatestVersion.Difficulties.Any(d => d.NoodleExtensions || d.Chroma));
             }
         }
+        
+        [TestMethod]
+        public async Task VivifyOnly()
+        {
+            var vivify = await Client.SearchBeatmaps(new SearchTextFilterOption
+            {
+                Vivify = true
+            });
+            
+            Assert.IsNotNull(vivify);
+
+            foreach (var map in vivify.Beatmaps)
+            {
+                Assert.IsTrue(map.LatestVersion.Difficulties.Any(d => d.Vivify));
+            }
+        }
 
         [TestMethod]
         public async Task BoomerSaber()
